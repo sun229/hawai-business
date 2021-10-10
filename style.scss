@@ -1,0 +1,518 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --brown: #a7907d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--white);
+  font-family: "Yu Mincho", "YuMincho", serif;
+}
+
+.wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+.sec-title {
+  color: var(--black);
+  border-left: 4px solid #003c85;
+  padding-left: 20px;
+  margin-bottom: 5%; 
+  & h1 {
+    font-size: 32px;
+  }
+}
+li {
+  list-style: none;
+}
+p {
+  font-size: 16px;
+}
+h2 {
+  font-size: 32px;
+}
+
+// 上部の画像
+.service-image {
+  margin-top: 100px;
+  position: relative;
+  & img {
+    width: 100%;
+  }
+  & .title {
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 900;
+    text-align: center;
+    & .top-title {
+      font-size: 42px;
+    }
+  }
+  & .border {
+    border-bottom: 0.5px solid var(--white);
+    width: 200%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 900;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 3px;
+    background-color: #1d63b5;
+    opacity: 0.3;
+    width: 100%;
+  }
+}
+
+//５つの嬉しい会員特典
+.benefits {
+  margin: 115px auto 127.5px;
+  position: relative;
+  & .benefits-slider {
+    display: flex;
+    overflow: hidden;
+    & .benefits-image {
+      position: relative;
+      & img {
+        max-width: 100%;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 3px;
+        background-color: var(--brown);
+        opacity: 0.5;
+        width: 100%;
+      }
+    }
+    & .benefits-slide-btn {
+      position: absolute;
+      bottom: 20px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      & span {
+        background-color: var(--brown);
+        color: var(--black);
+        font-size: 40px;
+        padding: 0 12px;
+        text-align: center;
+        margin: 0 20px;
+        cursor: pointer;
+        color: #000000;
+        &.active {
+          color: #00000050;
+        }
+      }
+    }
+  }
+
+  & .benefits-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 900;
+    & h2 {
+      margin: 0;
+    }
+   
+    & h3 {
+      margin: 44.9px  0 56px;
+      font-size: 24px;
+    }
+    & a {
+      border: solid 1px var(--white);
+      outline: solid 1px var(--white);
+      outline-offset: 3px;
+      padding: 8px 49px;
+      text-align: center;
+      position: relative;
+      font-size: 16px;
+      & img {
+        position: absolute;
+        right: 10px;
+        top: 8px;
+      }
+    }
+  }
+}
+
+//経験者だから分かること
+.advice {
+  background-color: var(--brown);
+
+  & .advice-flex {
+    display: flex;
+    padding: 69px 0 98px;
+    & img {
+      max-width: 50%;
+    }
+    & .advice-text {
+      margin-left: 70px;
+      & ul {
+        padding-left: 0;
+        & span {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+//サービス紹介ページ
+.serviceinfo {
+  margin: 115px auto 127.5px;
+  position: relative;
+  & .serviceinfo-slider {
+    display: flex;
+    overflow: hidden;
+    
+    & .serviceinfo-image {
+      position: relative;
+      & img {
+        max-width: 100%;
+        
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 3px;
+        background-color: #1d63b5;
+        opacity: 0.5;
+        width: 100%;
+      }
+    }
+    
+  }
+
+  & .serviceinfo-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 900;
+    & h3 {
+      margin: 16px 0 61px;
+      font-size: 24px;
+    }
+    & a {
+      border: solid 1px var(--white);
+      outline: solid 1px var(--white);
+      outline-offset: 3px;
+      padding: 8px 49px;
+      position: relative;
+      font-size: 16px;
+      & img {
+        position: absolute;
+        right: 10px;
+        top: 8px;
+      }
+    }
+  }
+  & .serviceinfo-slide-btn {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    & span {
+      border: 2px solid var(--white);
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      text-align: center;
+      margin: 0 20px 20px;
+      z-index: 900;
+      cursor: pointer;
+      &.active {
+        background-color: var(--white);
+      }
+    }
+  }
+}
+
+//登録料・情報提供料
+.price-title {
+  display: none;
+}
+.price {
+  width: 800px;
+  max-width: 100%;
+  background-color: #f6f5f3;
+  margin: 0 auto 121px;
+  text-align: center;
+  border: solid 1px var(--brown);
+  outline: solid 6px var(--brown);
+  outline-offset: 6px;
+  & span {
+    font-size: 16px;
+    color: var(--black);
+  }
+  & h2 {
+    color: var(--black);
+    margin: 29px auto 10px;
+  }
+  & p {
+    color: var(--brown);
+    margin: 15px auto 0;
+  }
+  & hr {
+    border: none;
+    width: 432px;
+    border-top: 1px dotted var(--brown);
+  }
+  & .price-info {
+    display: flex;
+    color: red;
+    justify-content: center;
+    & h1 {
+      font-size: 65px;
+      margin: 24px 0;
+    }
+    & .unit {
+      color: var(--brown);
+    }
+    & .price10 {
+      color: #003c85;
+    }
+    & .price15 {
+      color: var(--brown);
+    }
+
+    & .border {
+      width: 1px;
+      height: 60px;
+      border-right: 2px dotted var(--brown);
+      margin: 30px 20px;
+    }
+  }
+}
+
+
+
+@media (max-width: 1160px) {
+  .service-image {
+    margin-top: 68px;
+    & .title {
+      top: 45%;
+      & .top-title {
+        font-size: 32px;
+      }
+    }
+    & .border {
+      top: 75%;
+    }
+  }
+  .advice {
+    & .advice-flex {
+      justify-content: center;
+      padding: 44px 0 22px;
+      & img {
+        height: 300px;
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .sec-title {
+    margin-left: 23px;
+  }
+  .benefits-sec {
+    margin-bottom: calc(5% + 60px);
+  }
+  .benefits {
+    margin: 41px auto 24px;
+    & .benefits-slider {
+      & .benefits-image {
+        width: 60%;
+        min-width: 321px;
+        margin: 0 auto;
+      }
+      & .benefits-slide-btn {
+        bottom: auto;
+        top: 60px;
+      }
+    }
+    & .benefits-text {
+      top:60%;
+      & h2 {
+        font-size: 24px;
+      }
+      & h3 {
+        margin: 27px 0 35px;
+        font-size: 16px;
+      }
+    }
+  }
+  .advice {
+    & .advice-flex {
+      & img {
+        display: none;
+      }
+      & .advice-text {
+        margin-left: 0;
+        & h2 {
+          font-size: 24px;
+          margin-top: 0;
+          margin-left: 35px;
+        }
+        & li {
+          & span {
+            display: block;
+          }
+          &:nth-child(n + 5) {
+            display: none;
+          }
+        }
+        & .dots {
+          width: 1px;
+          height: 15px;
+          border-right: 3px dotted var(--white);
+          margin: 20px auto 5px;
+        }
+      }
+    }
+  }
+  .serviceinfo {
+    margin: 41px auto 80px;
+    & .serviceinfo-slider {
+      & .serviceinfo-image {
+        width: 60%; 
+        min-width: 321px;
+        margin: 0 auto;
+      }
+    }
+    & .serviceinfo-text {
+       top:55%;
+      & h2 {
+        font-size: 24px;
+      }
+      & h3 {
+        margin: 27px 0 35px;
+        font-size: 16px;
+      }
+    }
+    & .serviceinfo-slide-btn {
+        bottom: -60px;
+        & span {
+          border: 2px solid #003c85;
+          &.active {
+            background-color: #003c85;
+          }
+        }
+    }
+  }
+  .price-title {
+    display: block;
+    margin-bottom: 54px;
+    & span {
+      font-size: 14px;
+    }
+  }
+  .price {
+    width: 50%;
+    min-width: 295px;
+    h2,
+    p,
+    hr {
+      display: none;
+    }
+    & .price-info {
+      flex-direction: column;
+
+      & h1 {
+        margin: 0;
+      }
+      & .border {
+        width: 200px;
+        height: 5px;
+        border: none;
+        border-top: 2px dotted var(--brown);
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .service-image {
+    & .title {
+      & .top-title {
+        font-size: 24px;
+      }
+    }
+  }
+  .sec-title {
+    & h1 {
+      font-size: 24px;
+    }
+  }
+  .benefits {
+    & .benefits-slider {
+      & .benefits-slide-btn {
+        top: 50px;
+        & span {
+          font-size: 24px;
+          padding: 7px 16px;
+          margin: 10px;
+        }
+      }
+    }
+    & .benefits-text {
+      width: 100%;
+    }
+  }
+  .serviceinfo {
+    & .serviceinfo-text {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .sec-title {
+    margin-left: 13px;
+  }
+  .advice {
+    & .advice-flex {
+      & .advice-text {
+        & h2 {
+          margin-left: 15px;
+        }
+        & ul {
+          & li {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    
+  }
+  .serviceinfo {
+    & .serviceinfo-text {
+      & a {
+        padding: 8px 40px;
+      }
+    }
+  }
+}
